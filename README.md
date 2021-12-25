@@ -6,9 +6,9 @@ a latex paper template to support various conferences across fields including co
 ### supported conf
 * siggraph/tog
 * cvpr
+* eccv
 
 ### prepare to support conf
 * iccv
-* eccv
 * chi
 * uist 
