@@ -7,17 +7,25 @@
 % \keywords{Wireless sensor networks, media access control,
 % multi-channel, radio interference, time synchronization}
 \ifthenelse{\equal{\conf}{siggraph}}{
-\input{siggraph/siggraph_metadata}
-\input{abstract}
-\input{siggraph/siggraph_ccs_keyword}
+    \input{siggraph/siggraph_metadata}
+    \input{abstract}
+    \input{siggraph/siggraph_ccs_keyword}
 }{}
 
 \ifthenelse{\equal{\conf}{cvpr}}{
-\input{cvpr/cvpr_metadata}
+    \input{cvpr/cvpr_metadata}
 }{}
+
+\ifthenelse{\equal{\conf}{eccv}}{
+    \input{eccv/eccv_metadata}
+}{}
+
 \maketitle
 
 \ifthenelse{\equal{\conf}{cvpr}}{
+\input{abstract}
+}{}
+\ifthenelse{\equal{\conf}{eccv}}{
 \input{abstract}
 }{}
 
@@ -41,8 +49,21 @@
 
 % \input{conclusion}
 
-% \bibliographystyle{acmsiggraph}
-\bibliographystyle{ACM-Reference-Format}
-\bibliography{paper}
+
+\ifthenelse{\equal{\conf}{siggraph}}{
+    \bibliographystyle{ACM-Reference-Format}
+    \bibliography{paper}
+}{}
+
+\ifthenelse{\equal{\conf}{cvpr}}{
+    \bibliographystyle{ieee_fullname}
+    \bibliography{paper}
+}{}
+
+\ifthenelse{\equal{\conf}{eccv}}{
+    \bibliographystyle{splncs04}
+    \bibliography{paper}
+}{}
+
 
 \end{document}
