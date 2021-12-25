@@ -1,0 +1,112 @@
+%!TEX root = algo.tex
+%%% Packages use.
+% \usepackage[labelfont=bf,textfont=it]{caption}
+\usepackage{enumitem}
+% \usepackage{algorithm2e}
+\usepackage{amsmath}
+% \usepackage{amssymb}
+% \usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{multirow}
+% \usepackage{subfigure}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{ifthen}
+\usepackage{hyperref}
+% \usepackage{subfig}
+\usepackage{subcaption}
+\usepackage{bbold}
+% \usepackage{algorithm}
+% \usepackage{algorithmicx}
+% \usepackage{algpseudocode}
+% \usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+% \usepackage{coloremoji}
+% \usepackage[demo]{graphicx}
+% \usepackage{subfig}
+
+% \usepackage{subfig}
+% \usepackage{svg}
+
+\usepackage{xcolor}% http://ctan.org/pkg/xcolor
+% \usepackage{todonotes}
+\usepackage[normalem]{ulem} % for sout
+
+
+% \usepackage{algorithm}
+% \usepackage{algorithmicx}
+% \usepackage{algpseudocode}
+% \algnewcommand\algorithmicinput{\textbf{Input:}}
+% \algnewcommand\INPUT{\item[\algorithmicinput]}
+% \algnewcommand\algorithmicoutput{\textbf{Output:}}
+% \algnewcommand\OUTPUT{\item[\algorithmicoutput]}
+% \algnewcommand\algorithmicforeach{\textbf{for each}}
+
+
+% \algdef{S}[FOR]{ForEach}[1]{\algorithmicforeach\ #1\ \algorithmicdo}
+% \algrenewcommand{\alglinenumber}[1]{\color{red!80!blue}\footnotesize#1:}
+% \renewcommand{\algorithmiccomment}[1]{\hfill$\triangleright$\textcolor{blue}{#1}}
+% \algnewcommand\Func[2]{\textcolor{green}{#1}\textcolor{green}{(#2)}}
+% \algnewcommand\Insert[2]{Insert {#1} to #2.}
+% \algnewcommand\Input[1]{\State \textbf{Input: } #1}
+% \algnewcommand\Output[1]{\State \textbf{Output: } #1}
+% \renewcommand{\algorithmicrequire}{\textbf{Input:}}
+% \renewcommand{\algorithmicensure}{\textbf{Output:}}
+% \algnewcommand\algorithmicforeach{\textbf{for each:}}
+% \algnewcommand\ForEach{\item[ \algorithmicforeach]}
+
+% \renewcommand{\algorithmiccomment}[1]{%
+%   \hfill\#\ \eqparbox{COMMENT}{#1}%
+% }
+% \usepackage{etoolbox}  % patch def of algorithmic environment
+% \makeatletter
+% \patchcmd{\algorithmic}{\addtolength{\ALC@tlm}{\leftmargin} }{\addtolength{\ALC@tlm}{\leftmargin}}{}{}
+% \makeatother
+
+% \usepackage{subfig} % for subfloat
+
+%%% Color definition.
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{green}{rgb}{0, 0.6, 0}
+\definecolor{orange}{rgb}{1, 0.5, 0}
+\definecolor{mahogany}{rgb}{0.75, 0.25, 0.0}
+\definecolor{purple}{rgb}{0.6, 0, 0.6}
+\definecolor{darkgreen}{rgb}{0, 0.3, 0}
+\definecolor{orange}{rgb}{1, 0.5, 0.}
+
+% \newcommand{\ichao}[1]{\textcolor{blue}{\textbf{ichao: #1}}}
+\newcommand{\ichao}[1]{\textcolor{blue}{{#1}}}
+\newcommand{\iccmt}[1]{\textcolor{purple}{\textbf{ichao:} #1}}
+\newcommand{\toby}[1]{\textcolor{green}{{#1}}}
+\newcommand{\tccmt}[1]{\textcolor{green}{\textbf{toby:} #1}}
+\newcommand{\todo}[1]{\textcolor{red}{\textbf{TODO:} #1}\\}
+\newcommand{\discuss}[1]{\textcolor{orange}{\textbf{#1}}}
+\newcommand{\upd}[1]{\colorbox{yellow}{#1}}
+\newcommand{\expect}{\mathop{\mathbb{E}}\nolimits}
+\newcommand{\sj}[1]{\textcolor{green}{\textbf{sj: #1}}}
+%%% Editing comments.
+% ignore this
+\newcommand{\ignore}[1]{}
+\newcommand{\none}[1]{}
+\newcommand{\com}[1]{}
+% comment
+\newcommand{\cmt}[1]{\begin{sloppypar}\large\textcolor{red}{#1}\end{sloppypar}}
+% the note in the paper
+% \newcommand{\note}[1]{\cmt{Note: #1}}
+% todo list
+\newcommand{\note}[1]{\textcolor{red}{#1}}
+\newcommand{\torevise}[1]{\textcolor{mahogany}{#1}}
+%%% Editing comment.
+% josh
+% \newcommand{\ichao}[1]{\textcolor{blue}{#1}}
+
+%%% Frequently used terms.
+\newcommand{\etal}{{\it{et~al.}}}
+\newcommand{\ie}{i.e.}
+\newcommand{\eg}{e.g.}
+\newcommand{\figname}{Figure}
+\newcommand{\tabname}{Table}
+\newcommand{\secname}{Section}
+\newcommand{\algoname}{Algorithm}
+\newcommand{\eqname}{Eq.}
+\newcommand{\chapname}{Chapter}
+\DeclareMathOperator*{\argmin}{arg\,min}

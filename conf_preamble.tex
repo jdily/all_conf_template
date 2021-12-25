@@ -1,0 +1,25 @@
+\RequirePackage{ifthen}
+\newcommand{\conf}{cvpr}
+% submit, camera, final....
+\newcommand{\stage}{submit}
+% \def\conf{cvpr}
+% \input{siggraph_preamble}
+
+
+\ifthenelse{\equal{\conf}{siggraph}}{
+    \input{siggraph/siggraph_preamble}
+}
+{
+}
+
+\ifthenelse{\equal{\conf}{cvpr}}{
+    \input{cvpr/cvpr_preamble}
+}
+{
+}
+
+\ifthenelse{\equal{\conf}{eccv}}{
+    \input{eccv/eccv_preamble}
+}
+{
+}

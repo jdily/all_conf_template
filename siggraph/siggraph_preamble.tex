@@ -1,0 +1,34 @@
+\ifthenelse{\equal{\stage}{submit}}{
+\documentclass[acmtog,anonymous,review]{acmart}
+}
+{
+\documentclass[acmtog]{acmart}
+}
+
+\acmSubmissionID{666}
+
+\usepackage{booktabs} % For formal tables
+
+% TOG prefers author-name bib system with square brackets
+\citestyle{acmauthoryear}
+%\setcitestyle{nosort,square} % nosort to allow for manual chronological ordering
+
+\input{macro}
+
+\usepackage[ruled]{algorithm2e} % For algorithms
+\renewcommand{\algorithmcfname}{ALGORITHM}
+\SetAlFnt{\small}
+\SetAlCapFnt{\small}
+\SetAlCapNameFnt{\small}
+\SetAlCapHSkip{0pt}
+
+% Metadata Information
+\acmJournal{TOG}
+\acmVolume{38}
+\acmNumber{4}
+\acmArticle{39}
+\acmYear{2021}
+\acmMonth{7}
+
+% Copyright
+\setcopyright{none}
