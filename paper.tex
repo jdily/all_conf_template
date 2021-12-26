@@ -18,6 +18,17 @@
     \input{uist/uist_ccs_keyword}
 }{}
 
+\ifthenelse{\equal{\conf}{tvcg}}{
+    \input{ieeetrans/ieeetrans_metadata}
+    \IEEEtitleabstractindextext{
+    \input{abstract}
+        \begin{IEEEkeywords}
+        keywords...
+        \end{IEEEkeywords}
+    }
+    % \input{uist/uist_ccs_keyword}
+}{}
+
 \ifthenelse{\equal{\conf}{cvpr}}{
     \input{cvpr/cvpr_metadata}
 }{}
@@ -26,10 +37,24 @@
     \input{eccv/eccv_metadata}
 }{}
 
+\ifthenelse{\equal{\conf}{pg}}{
+    \input{cgf/cgf_metadata}
+}{}
+
 \maketitle
 
 \ifthenelse{\equal{\conf}{cvpr} \OR \equal{\conf}{eccv}}{
 \input{abstract}
+}{}
+
+\ifthenelse{\equal{\conf}{pg}}{
+    \input{abstract}
+    % \input{cgf_ccs_keyword}
+}{}
+
+\ifthenelse{\equal{\conf}{tvcg}}{
+\IEEEdisplaynontitleabstractindextext
+\IEEEpeerreviewmaketitle
 }{}
 
 \input{introduction}
@@ -38,19 +63,6 @@
 \input{method}
 \input{experiment}
 \input{conclusion}
-% \input{background}
-% % \input{env}
-% % \input{discussion}
-% % \input{overview}
-% % \input{method}
-% \input{observation}
-% \input{reward}
-% \input{policy}
-
-% \input{result}
-% \input{note}
-
-% \input{conclusion}
 
 
 \ifthenelse{\equal{\conf}{siggraph} \OR \equal{\conf}{uist}}{
@@ -65,6 +77,18 @@
 
 \ifthenelse{\equal{\conf}{eccv}}{
     \bibliographystyle{splncs04}
+    \bibliography{paper}
+}{}
+
+%% any other conf? check -> sgp, sca, egsr 
+\ifthenelse{\equal{\conf}{pg} \OR \equal{\conf}{eg} \OR \equal{\conf}{cgf}}{
+    \bibliographystyle{eg-alpha-doi} 
+    \bibliography{paper}       
+}{}
+
+\ifthenelse{\equal{\conf}{tvcg}}{
+    \bibliographystyle{IEEEtran}
+    % argument is your BibTeX string definitions and bibliography database(s)
     \bibliography{paper}
 }{}
 

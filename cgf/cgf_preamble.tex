@@ -1,0 +1,54 @@
+% ---------------------------------------------------------------------------
+% Author guideline and sample document for EG publication using LaTeX2e input
+% D.Fellner, v1.15, Dec 14, 2018
+\documentclass{egpubl}
+\ifthenelse{\equal{\conf}{pg}}{
+    \usepackage{pg2021}
+}{}
+
+% 
+ 
+% --- for  Annual CONFERENCE
+% \ConferenceSubmission   % uncomment for Conference submission
+% \ConferencePaper        % uncomment for (final) Conference Paper
+% \STAR                   % uncomment for STAR contribution
+% \Tutorial               % uncomment for Tutorial contribution
+% \ShortPresentation      % uncomment for (final) Short Conference Presentation
+% \Areas                  % uncomment for Areas contribution
+% \MedicalPrize           % uncomment for Medical Prize contribution
+% \Education              % uncomment for Education contribution
+% \Poster                 % uncomment for Poster contribution
+% \DC                     % uncomment for Doctoral Consortium
+%
+% --- for  CGF Journal
+
+\ifthenelse{\equal{\conf}{cgf}}{
+    %\JournalSubmission    % uncomment for submission to Computer Graphics Forum
+    %\JournalPaper         % uncomment for final version of Journal Paper
+}{}
+
+%
+% --- for  CGF Journal: special issue
+\ifthenelse{\equal{\conf}{cgf}}{
+    \SpecialIssueSubmission    % uncomment for submission to , special issue
+    % \SpecialIssuePaper         % uncomment for final version of Computer Graphics Forum, special issue
+}{}
+
+\usepackage[T1]{fontenc}
+\usepackage{dfadobe}  
+
+\usepackage{cite}  % comment out for biblatex with backend=biber
+% ---------------------------
+% \biberVersion
+\BibtexOrBiblatex
+% \usepackage[backend=biber,bibstyle=EG,citestyle=alphabetic,backref=true]{biblatex} 
+% \addbibresource{paper.bib}
+% ---------------------------  
+\electronicVersion
+\PrintedOrElectronic
+% for including postscript figures
+% mind: package option 'draft' will replace PS figure by a filename within a frame
+\ifpdf \usepackage[pdftex]{graphicx} \pdfcompresslevel=9
+\else \usepackage[dvips]{graphicx} \fi
+
+\usepackage{egweblnk} 
