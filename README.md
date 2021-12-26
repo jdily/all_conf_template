@@ -17,7 +17,7 @@ a latex paper template to support various conferences across fields including co
 - [ ] other IEEE transaction??
 
 ### TODOs
-- [ ] better support teaser
+- [ ] better support teaser.
 - [ ] make another macro that is compatible with most of the conf sty files.
-- [ ] write a simple tutorial
-
+- [ ] write a simple tutorial.
+- [ ] check what is the best way to update sty files for each year.
