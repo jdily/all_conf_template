@@ -14,6 +14,14 @@
     \input{uist/uist_ccs_keyword}
 }{}
 
+
+\ifthenelse{\equal{\conf}{chi}}{
+    \input{chi/chi_metadata}
+    \input{abstract}
+    \input{chi/chi_ccs_keyword}
+}{}
+
+
 \ifthenelse{\equal{\conf}{tvcg}}{
     \input{ieeetrans/ieeetrans_metadata}
     \IEEEtitleabstractindextext{
@@ -61,7 +69,7 @@
 \input{conclusion}
 
 
-\ifthenelse{\equal{\conf}{siggraph} \OR \equal{\conf}{uist}}{
+\ifthenelse{\equal{\conf}{siggraph} \OR \equal{\conf}{uist} \OR \equal{\conf}{chi}}{
     \bibliographystyle{ACM-Reference-Format}
     \bibliography{paper}
 }{}
