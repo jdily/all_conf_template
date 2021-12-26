@@ -1,5 +1,5 @@
 \RequirePackage{ifthen}
-\newcommand{\conf}{siggraph}
+\newcommand{\conf}{uist}
 % submit, camera, final....
 \newcommand{\stage}{submit}
 % \def\conf{cvpr}
@@ -20,6 +20,12 @@
 
 \ifthenelse{\equal{\conf}{eccv}}{
     \input{eccv/eccv_preamble}
+}
+{
+}
+
+\ifthenelse{\equal{\conf}{uist}}{
+    \input{uist/uist_preamble}
 }
 {
 }

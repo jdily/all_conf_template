@@ -7,8 +7,10 @@ a latex paper template to support various conferences across fields including co
 * siggraph/tog
 * cvpr
 * eccv
+* uist
 
 ### prepare to support conf
-* iccv
-* chi
-* uist 
+* iccv (should be supported by the cvpr template already, need to confirm  detailed difference)
+* chi (should be supported by acmart already, need to confirm detailed difference)
+* IEEE transaction
+* cgf series (EG, PG, ...)

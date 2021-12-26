@@ -1,0 +1,27 @@
+\ifthenelse{\equal{\stage}{submit}}{
+\documentclass[manuscript,anonymous,review]{acmart}
+}
+{
+\documentclass[manuscript]{acmart}
+}
+
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+
+\setcopyright{acmcopyright}
+\copyrightyear{2021}
+\acmYear{2021}
+\acmDOI{10.1145/1122445.1122456}
+
+%% These commands are for a PROCEEDINGS abstract or paper.
+\acmConference[UIST '21]{ACM Symposium on User Interface Software and Technology}{October 10--13, 2021}{virtual}
+\acmBooktitle{ACM Symposium on User Interface Software and Technology (UIST '21), October 10--13, 2021, virtual}
+\acmPrice{15.00}
+\acmISBN{978-1-4503-XXXX-X/18/06}
+
+%% packages
+%\usepackage{subcaption}
+\usepackage{hyperref}
+\acmSubmissionID{666}

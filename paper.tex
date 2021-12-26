@@ -12,6 +12,12 @@
     \input{siggraph/siggraph_ccs_keyword}
 }{}
 
+\ifthenelse{\equal{\conf}{uist}}{
+    \input{uist/uist_metadata}
+    \input{abstract}
+    \input{uist/uist_ccs_keyword}
+}{}
+
 \ifthenelse{\equal{\conf}{cvpr}}{
     \input{cvpr/cvpr_metadata}
 }{}
@@ -22,10 +28,7 @@
 
 \maketitle
 
-\ifthenelse{\equal{\conf}{cvpr}}{
-\input{abstract}
-}{}
-\ifthenelse{\equal{\conf}{eccv}}{
+\ifthenelse{\equal{\conf}{cvpr} \OR \equal{\conf}{eccv}}{
 \input{abstract}
 }{}
 
@@ -50,7 +53,7 @@
 % \input{conclusion}
 
 
-\ifthenelse{\equal{\conf}{siggraph}}{
+\ifthenelse{\equal{\conf}{siggraph} \OR \equal{\conf}{uist}}{
     \bibliographystyle{ACM-Reference-Format}
     \bibliography{paper}
 }{}
