@@ -12,12 +12,12 @@ a latex paper template to support various conferences across fields including co
 * cgf series
 
 ### prepare to support conf
-- [] iccv (should be supported by the cvpr template already, need to confirm  detailed difference)
-- [] chi (should be supported by acmart already, need to confirm detailed difference)
-- [] other IEEE transaction??
+- [ ] iccv (should be supported by the cvpr template already, need to confirm  detailed difference)
+- [ ] chi (should be supported by acmart already, need to confirm detailed difference)
+- [ ] other IEEE transaction??
 
 ### TODOs
-- [] better support teaser
-- [] make another macro that is compatible with most of the conf sty files.
-- [] write a simple tutorial
+- [ ] better support teaser
+- [ ] make another macro that is compatible with most of the conf sty files.
+- [ ] write a simple tutorial
 
