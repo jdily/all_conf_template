@@ -1,5 +1,5 @@
 \RequirePackage{ifthen}
-\newcommand{\conf}{tvcg}
+\newcommand{\conf}{chi}
 % submit, camera, final....
 \newcommand{\stage}{submit}
 % \def\conf{cvpr}
@@ -14,6 +14,7 @@
 \isequal{\conf}{cvpr}{\input{cvpr/cvpr_preamble}}
 \isequal{\conf}{eccv}{\input{eccv/eccv_preamble}}
 \isequal{\conf}{uist}{\input{uist/uist_preamble}}
+\isequal{\conf}{chi}{\input{chi/chi_preamble}}
 \isequal{\conf}{pg}{\input{cgf/cgf_preamble}}
 \isequal{\conf}{tvcg}{\input{ieeetrans/ieeetrans_preamble}}
 
