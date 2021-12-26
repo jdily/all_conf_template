@@ -36,3 +36,5 @@ For cgf series (EG, PG, and so on), you can change the submission number in `cgf
 - [ ] make another macro that is compatible with most of the conf sty files.
 - [ ] write a simple tutorial for stage.
 - [ ] check what is the best way to update sty files for each year.
+
+If you have any questions/comments/bug reports, feel free to open a github issue or e-mail to the author I-Chao Shen (ichao.shen@ui.is.s.u-tokyo.ac.jp)
