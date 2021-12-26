@@ -1,5 +1,5 @@
 # all_conf_template
-a latex paper template supports various conferences across fields including computer graphics,  computer vision, and hci.
+a latex paper template supports various conferences across research fields including computer graphics,  computer vision, and hci.
 
 **still under construction**.
 
