@@ -10,6 +10,12 @@ To switch to different conference, you only need to go to `conf_preamble.tex`, a
 ```
 And the template will take care of the rest.
 
+To edit the title and authors information, you can go to the `xxx_metadata.tex`, where xxx is the name of the conference you want to submit to.
+
+For ACM conferences and CVPR, you can edit the submission number in `xxx_preamble.tex`.
+For ECCV, you can find the submission number in `eccv_preamble.tex`.
+For cgf series (EG, PG, and so on), you can change the submission number in `cgf_metadata.tex`.
+
 
 ### supported conf
 * siggraph/tog
@@ -18,10 +24,11 @@ And the template will take care of the rest.
 * uist
 * tvcg
 * cgf series
+* chi
 
 ### prepare to support conf
 - [ ] iccv (should be supported by the cvpr template already, need to confirm  detailed difference)
-- [ ] chi (should be supported by acmart already, need to confirm detailed difference)
+- [ ] cscw
 - [ ] other IEEE transaction??
 
 ### TODOs
