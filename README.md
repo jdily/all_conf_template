@@ -30,6 +30,7 @@ For cgf series (EG, PG, and so on), you can change the submission number in `cgf
 - [ ] iccv (should be supported by the cvpr template already, need to confirm  detailed difference)
 - [ ] cscw
 - [ ] other IEEE transaction??
+- [ ] ML conf (Neurips, ICML, ICLR, AAAI, IJCAI?)
 
 ### TODOs
 - [ ] better support teaser.
