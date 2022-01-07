@@ -11,7 +11,7 @@
 \usepackage{ifthen}
 \usepackage{hyperref}
 % \usepackage{subfig}
-\usepackage{subcaption}
+% \usepackage{subcaption}
 \usepackage{bbold}
 
 \usepackage{xcolor}% http://ctan.org/pkg/xcolor
@@ -45,16 +45,27 @@
 \newcommand{\com}[1]{}
 % comment
 \newcommand{\cmt}[1]{\begin{sloppypar}\large\textcolor{red}{#1}\end{sloppypar}}
-% the note in the paper
-% \newcommand{\note}[1]{\cmt{Note: #1}}
-% todo list
-\newcommand{\note}[1]{\textcolor{red}{#1}}
-\newcommand{\torevise}[1]{\textcolor{mahogany}{#1}}
 
 %%% Frequently used terms.
-\newcommand{\etal}{{\it{et~al.}}}
-\newcommand{\ie}{i.e.}
-\newcommand{\eg}{e.g.}
+\ifdefined\etal
+  \message{\string\etal\space is defined}%
+\else
+  \newcommand{\etal}{{\it{et~al.}}}
+\fi
+\ifdefined\ie
+  \message{\string\ie\space is defined}%
+\else
+  \newcommand{\ie}{{i.e.,}}
+\fi
+\ifdefined\eg
+  \message{\string\eg\space is defined}%
+\else
+  \newcommand{\eg}{{e.g.,}}
+\fi
+
+% \newcommand{\etal}{{\it{et~al.}}}
+% \newcommand{\ie}{i.e.,}
+% \newcommand{\eg}{e.g.,}
 \newcommand{\figname}{Figure}
 \newcommand{\tabname}{Table}
 \newcommand{\secname}{Section}
