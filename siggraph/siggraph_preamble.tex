@@ -1,8 +1,18 @@
 \ifthenelse{\equal{\stage}{submit}}{
-\documentclass[acmtog,anonymous,review]{acmart}
+  \ifthenelse{\equal{\track}{journal}}{
+        \documentclass[acmtog,anonymous,review]{acmart}
+  }
+  {
+        \documentclass[sigconf,anonymous,review]{acmart}
+  }
 }
 {
-\documentclass[acmtog]{acmart}
+  \ifthenelse{\equal{\track}{journal}}{
+        \documentclass[acmtog]{acmart}
+  }
+  {
+        \documentclass[sigconf]{acmart}
+  }
 }
 
 \acmSubmissionID{666}
@@ -11,8 +21,6 @@
 
 % TOG prefers author-name bib system with square brackets
 \citestyle{acmauthoryear}
-%\setcitestyle{nosort,square} % nosort to allow for manual chronological ordering
-
 \input{macro}
 
 % \usepackage[ruled]{algorithm2e} % For algorithms
