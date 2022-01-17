@@ -1,18 +1,8 @@
 \ifthenelse{\equal{\stage}{submit}}{
-  \ifthenelse{\equal{\track}{journal}}{
-        \documentclass[acmtog,anonymous,review]{acmart}
-  }
-  {
-        \documentclass[sigconf,anonymous,review]{acmart}
-  }
+  \documentclass[acmtog,anonymous,review]{acmart}
 }
 {
-  \ifthenelse{\equal{\track}{journal}}{
-        \documentclass[acmtog]{acmart}
-  }
-  {
-        \documentclass[sigconf]{acmart}
-  }
+  \documentclass[acmtog]{acmart}
 }
 
 \acmSubmissionID{666}
