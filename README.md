@@ -38,5 +38,6 @@ For cgf series (EG, PG, and so on), you can change the submission number in `cgf
 - [ ] write a simple tutorial for stage.
 - [ ] check what is the best way to update sty files for each year.
 - [ ] how to connect to overleaf?
+- [ ] add support for cross document (e.g., main paper and supplemental material referecen. ref: https://www.overleaf.com/learn/how-to/Cross_referencing_with_the_xr_package_in_Overleaf)
 
 If you have any questions/comments/bug reports, feel free to open a github issue or e-mail to the author I-Chao Shen (ichao.shen@ui.is.s.u-tokyo.ac.jp)
