@@ -33,7 +33,7 @@ For cgf series (EG, PG, and so on), you can change the submission number in `cgf
 - [ ] ML conf (Neurips, ICML, ICLR, AAAI, IJCAI?)
 
 ### TODOs
-- [ ] update ECCV template (https://eccv2022.ecva.net/submission/call-for-papers/) 
+- [*] update ECCV template (https://eccv2022.ecva.net/submission/call-for-papers/) 
 - [ ] better support teaser.
 - [ ] make another macro that is compatible with most of the conf sty files.
 - [ ] write a simple tutorial for stage.
