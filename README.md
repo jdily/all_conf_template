@@ -3,7 +3,7 @@ a latex paper template that supports various conferences across research fields 
 
 **still under construction**.
 
-### How to use
+## How to use
 To switch to different conference, you only need to go to `conf_preamble.tex`, and replace **siggraph** in the following line with some conference/journal name (please check the supportted conference/journal name listed below) you want to submit to.
 ```
 \newcommand{\conf}{siggraph} -> \newcommand{\conf}{cvpr} ## if you want to submit to cvpr
@@ -17,7 +17,7 @@ For ECCV, you can find the submission number in `eccv_preamble.tex`.
 For cgf series (EG, PG, and so on), you can change the submission number in `cgf_metadata.tex`.
 
 
-### supported conf
+## supported conf
 * siggraph/tog
 * cvpr
 * eccv
@@ -26,13 +26,13 @@ For cgf series (EG, PG, and so on), you can change the submission number in `cgf
 * cgf series
 * chi
 
-### prepare to support conf
+## prepare to support conf
 - [ ] iccv (should be supported by the cvpr template already, need to confirm  detailed difference)
 - [ ] cscw
 - [ ] other IEEE transaction??
 - [ ] ML conf (Neurips, ICML, ICLR, AAAI, IJCAI?)
 
-### TODOs
+## TODOs
 - [x] update ECCV template (https://eccv2022.ecva.net/submission/call-for-papers/) 
 - [x] better support teaser.
 - [x] make another macro that is compatible with most of the conf sty files.
