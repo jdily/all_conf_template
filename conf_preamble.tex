@@ -1,7 +1,7 @@
 \RequirePackage{ifthen}
-\newcommand{\conf}{siggraph}
+\newcommand{\conf}{neurips}
 % submit, camera, final....
-\newcommand{\stage}{final}
+\newcommand{\stage}{submit}
 % \newcommand{\track}{journal}
 % \def\conf{cvpr}
 % \input{siggraph_preamble}
@@ -18,6 +18,8 @@
 \isequal{\conf}{chi}{\input{chi/chi_preamble}}
 \isequal{\conf}{pg}{\input{cgf/cgf_preamble}}
 \isequal{\conf}{tvcg}{\input{ieeetrans/ieeetrans_preamble}}
+\isequal{\conf}{neurips}{\input{neurips/neurips_preamble}
+\input{neurips/neurips_metadata}}
 
 % \ifthenelse{\equal{\conf}{siggraph}}{
 %     \input{siggraph/siggraph_preamble}

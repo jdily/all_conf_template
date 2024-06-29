@@ -3,8 +3,8 @@
 %%%  @BibTeX-style-file{
 %%%     author          = "Nelson H. F. Beebe, Boris Veytsman and Gerald Murray",
 %%%     version         = "2.1",
-%%%     acmart-version  = "1.79",
-%%%     date            = "14 June 2017",
+%%%     acmart-version  = "1.90",
+%%%     date            = "Mar 26 2023",
 %%%     filename        = "ACM-Reference-Format.bst",
 %%%     email           = "borisv@lk.net, boris@varphi.com",
 %%%     codetable       = "ISO/ASCII",
@@ -64,6 +64,7 @@ ENTRY
         isbn-13       % UTAH
         issn          % UTAH
         lccn          % UTAH
+	distinctURL   % whether to print url if doi is present
   }
   {}
   { label.year extra.label sort.year sort.label basic.label.year}
@@ -149,6 +150,16 @@ FUNCTION { empty.or.unknown }
     { #1 #2 substring$ "??" = }
   if$
 }
+
+FUNCTION { empty.or.zero }
+{
+  %% Examine the top entry and push 1 if it is empty, or is zero
+  duplicate$ empty$
+    { pop$ #1 }
+    { "0" = }
+  if$
+}
+
 
 FUNCTION { writeln }
 {
@@ -737,10 +748,14 @@ FUNCTION { output.eprint } %
 % Changes by BV 2011/04/15.  Do not output
 % url if doi is defined
 %
+%
+% Changes by BV 2021/11/26.  Output url even if doi is defined
+% if distinctURL is not zero.
+%
 FUNCTION { output.url } % UTAH
 { % return with stack untouched
   % output URL and associated lastaccessed fields
-  doi empty.or.unknown
+  doi empty.or.unknown distinctURL empty.or.zero not or
   {
     url empty.or.unknown
       { }
@@ -1990,7 +2005,7 @@ FUNCTION { calc.basic.label }
   if$
   duplicate$
   year empty.or.unknown
-    { "[n.\,d.]" }
+    { "{[n.\,d.]}" }
     { year field.or.null purify$ #-1 #4 substring$}
   if$
   *
@@ -2038,7 +2053,7 @@ FUNCTION { calc.label }
   % save the year for sort processing afterwards (adding a, b, c, etc.)
   %
   year empty.or.unknown
-    { "[n.\,d.]" }
+    { "{[n.\,d.]}" }
     { year field.or.null purify$ #-1 #4 substring$}
   if$
   'label.year :=
@@ -2048,10 +2063,12 @@ FUNCTION { calc.label }
 FUNCTION { output.bibitem }
 {
   newline$
-  "\bibitem[\protect\citeauthoryear{" write$
-  calc.label write$
+  "\bibitem[" write$
+  calc.basic.label write$
+  "(" write$
   sort.year write$
-  "}]%" writeln
+  ")" write$
+  "]%" writeln
   "        {" write$
   cite$ write$
   "}" writeln
