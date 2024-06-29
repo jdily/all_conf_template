@@ -1,5 +1,5 @@
 \RequirePackage{ifthen}
-\newcommand{\conf}{neurips}
+\newcommand{\conf}{aaai}
 % submit, camera, final....
 \newcommand{\stage}{submit}
 % \newcommand{\track}{journal}
@@ -20,6 +20,8 @@
 \isequal{\conf}{tvcg}{\input{ieeetrans/ieeetrans_preamble}}
 \isequal{\conf}{neurips}{\input{neurips/neurips_preamble}
 \input{neurips/neurips_metadata}}
+\isequal{\conf}{aaai}{\input{aaai/aaai_preamble}}
+
 
 % \ifthenelse{\equal{\conf}{siggraph}}{
 %     \input{siggraph/siggraph_preamble}

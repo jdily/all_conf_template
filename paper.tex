@@ -47,7 +47,8 @@
 
 \maketitle
 
-\ifthenelse{\equal{\conf}{cvpr} \OR \equal{\conf}{eccv} \OR \equal{\conf}{neurips}}{
+\ifthenelse{\equal{\conf}{cvpr} \OR \equal{\conf}{eccv} \OR \equal{\conf}{neurips}
+    \OR \equal{\conf}{aaai}}{
 \input{abstract}
 }{}
 
@@ -95,6 +96,13 @@
     % argument is your BibTeX string definitions and bibliography database(s)
     \bibliography{paper}
 }{}
-
+\ifthenelse{\equal{\conf}{neurips}}{
+    \bibliographystyle{plainnat}
+    \bibliography{paper}
+}{}
+\ifthenelse{\equal{\conf}{aaai}}{
+    % \bibliographystyle{aaai24}
+    \bibliography{paper}       
+}{}
 
 \end{document}
