@@ -1,10 +1,13 @@
 % \RequirePackage{cvpr}
 % \ProvidesClass{./cvpr}
+\documentclass[10pt,twocolumn,letterpaper]{article}
 \ifthenelse{\equal{\stage}{submit}}{
-\documentclass[review]{cvpr}
+% \documentclass[review]{cvpr}
+\usepackage[review]{cvpr}
 }
 {
-\documentclass[final]{cvpr}
+% \documentclass[final]{cvpr}
+\usepackage{cvpr}
 }
 % \ifthenelse{\equal{\stage}{submit}}{
 % \documentclass[acmtog,anonymous,review]{acmart}
@@ -15,9 +18,11 @@
 
 
 \input{macro}
+\definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
+\usepackage[pagebackref,breaklinks,colorlinks,citecolor=cvprblue]{hyperref}
 %%%%%%%%% PAPER ID  - PLEASE UPDATE
-\def\cvprPaperID{666} % *** Enter the CVPR Paper ID here
+\def\paperID{123} % *** Enter the CVPR Paper ID here
 \def\confName{CVPR}
-\def\confYear{2022}
+\def\confYear{2024}
 
 % \input{macro}
