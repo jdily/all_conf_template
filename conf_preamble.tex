@@ -1,5 +1,5 @@
 \RequirePackage{ifthen}
-\newcommand{\conf}{aaai}
+\newcommand{\conf}{siggraph}
 % submit, camera, final....
 \newcommand{\stage}{submit}
 % \newcommand{\track}{journal}
@@ -21,28 +21,3 @@
 \isequal{\conf}{neurips}{\input{neurips/neurips_preamble}
 \input{neurips/neurips_metadata}}
 \isequal{\conf}{aaai}{\input{aaai/aaai_preamble}}
-
-
-% \ifthenelse{\equal{\conf}{siggraph}}{
-%     \input{siggraph/siggraph_preamble}
-% }
-% {
-% }
-
-% \ifthenelse{\equal{\conf}{cvpr}}{
-%     \input{cvpr/cvpr_preamble}
-% }
-% {
-% }
-
-% \ifthenelse{\equal{\conf}{eccv}}{
-%     \input{eccv/eccv_preamble}
-% }
-% {
-% }
-
-% \ifthenelse{\equal{\conf}{uist}}{
-%     \input{uist/uist_preamble}
-% }
-% {
-% }
