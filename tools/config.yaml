@@ -1,0 +1,38 @@
+
+default:
+  venue: siggraph
+  
+#   use_ycrcb: False
+#   seginit:
+#     type: circle
+#     radius: 5
+#   save:
+#     init: false
+#     image: true
+#     output: false
+#     video: false
+#     loss: false
+#   trainable: 
+#     bg: false
+#     record: true
+#     stroke: false
+#     stroke_color: true
+#     stroke_width: true
+# #  num_segments: 4
+#   num_iter: 500
+#   lr_base:
+#     bg: 0.01
+#     point: 1
+#     color: 0.01
+#     stroke_width: 0.01
+#     stroke_color: 0.01
+#     # stroke_width: null
+#     # stroke_color: null
+#   coord_init:
+#     type: sparse
+#   seed: 0
+#   loss:
+#     use_l1_loss: false
+#     use_distance_weighted_loss: true
+#     xing_loss_weight: 0.01
+#     bis_loss_weight: null
