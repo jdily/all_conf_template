@@ -93,9 +93,15 @@
 % comment
 \newcommand{\cmt}[1]{\begin{sloppypar}\large\textcolor{red}{#1}\end{sloppypar}}
 %%% Frequently used terms.
-% \newcommand{\etal}{{\it{et~al.}}}
-% \newcommand{\ie}{i.e.,}
-% \newcommand{\eg}{e.g.,}
+\ifthenelse{\equal{\conf}{cvpr}}
+{
+}
+{
+\newcommand{\etal}{{\it{et~al.}}}
+\newcommand{\ie}{i.e.,}
+\newcommand{\eg}{e.g.,}
+}
+
 \DeclareMathOperator*{\argmin}{arg\,min}
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator*{\minimize}{minimize}
