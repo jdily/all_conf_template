@@ -48,7 +48,7 @@
 \maketitle
 
 \ifthenelse{\equal{\conf}{cvpr} \OR \equal{\conf}{eccv} \OR \equal{\conf}{neurips}
-    \OR \equal{\conf}{aaai}}{
+    \OR \equal{\conf}{aaai} \OR \equal{\conf}{iclr}}{
 \input{abstract}
 }{}
 
@@ -104,5 +104,10 @@
     % \bibliographystyle{aaai24}
     \bibliography{paper}       
 }{}
+\ifthenelse{\equal{\conf}{aaai}}{
+\bibliography{iclr2024_conference}
+\bibliographystyle{iclr2024_conference}   
+}{}
+
 
 \end{document}
